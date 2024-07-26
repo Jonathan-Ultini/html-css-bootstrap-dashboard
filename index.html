@@ -2,29 +2,42 @@
 <html lang="en">
 
 <head>
+  <!-- Impostazioni di base del documento HTML -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="/images/duck.png">
   <title>Dashboard</title>
+
+  <!-- Importazione del foglio di stile di Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Importazione di Font Awesome per le icone -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+  <!-- Importazione del foglio di stile personalizzato -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 
 <body>
 
-
+  <!-- Navbar con sfondo scuro e bordo inferiore -->
   <nav class="navbar navbar-expand-md bg-dark border-bottom border-body" data-bs-theme="dark">
     <div class="container-fluid">
+      <!-- Logo -->
       <img src="images/duck.png" width="60" height="60">
+
+      <!-- Bottone per il menu a tendina (visibile su dispositivi mobili) -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+      <!-- Contenuto della navbar -->
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav me-auto">
+          <!-- Link di navigazione -->
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Catalogo Libri</a>
           </li>
@@ -38,6 +51,8 @@
             <a class="nav-link" href="#">Help</a>
           </li>
         </ul>
+
+        <!-- Form di ricerca -->
         <form class="d-flex ms-auto" role="search">
           <input class="form-control me-2 bg-light" type="search" placeholder="Cerca..." aria-label="Search">
           <button class="btn btn-outline-light" type="submit">Cerca</button>
@@ -46,13 +61,18 @@
     </div>
   </nav>
 
+  <!-- Contenitore principale -->
   <div class="container">
+    <!-- Intestazione della pagina e pulsante "Aggiungi Libro" -->
     <div class="d-flex justify-content-between mt-4 mb-4">
       <h1>Catalogo Libri</h1>
       <button class="btn btn-primary">Aggiungi Libro</button>
     </div>
+
+    <!-- Tabella dei libri -->
     <table class="table">
       <thead>
+        <!-- Righe della tabella con i libri -->
         <tr>
           <th scope="col">Titolo</th>
           <th scope="col" class="d-none d-lg-table-cell">Data Prestito</th>
@@ -66,6 +86,7 @@
           <td class="d-none d-lg-table-cell">---</td>
           <td><span class="badge text-bg-success">Disponibile</span></td>
           <td class="text-nowrap">
+            <!-- Pulsanti di modifica e cancellazione -->
             <button class="btn btn-light btn-sm border border-secondary d-inline-block">
               <i class="fas fa-pencil-alt"></i>
             </button>
@@ -222,33 +243,94 @@
   </div>
 
 
+
   <div class="container mt-5">
-    <div class="card">
-      <div class="card-header">
-        Todo
-      </div>
-      <div class="card-body">
+    <div class="row">
+      <div class="col-lg-4 mb-4"> <!-- Card 1 -->
         <div class="card">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="todo1">
-                <label class="form-check-label" for="todo1">Chiamare segreteria</label>
+          <div class="card-header">
+            Todo
+          </div>
+          <div class="card-body">
+            <div class="card">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="todo1">
+                    <label class="form-check-label" for="todo1">Chiamare segreteria</label>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="todo2">
+                    <label class="form-check-label" for="todo2">Mandare avvisi prestiti scaduti</label>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="todo3">
+                    <label class="form-check-label" for="todo3">Ordinare nuovi libri</label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4"> <!-- Card 2 -->
+        <div class="card">
+          <div class="card-header">
+            F.A.Q.
+          </div>
+          <div class="card-body">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Come aggiungere un nuovo libro?
+                  </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sed ullam
+                    odio aliquid dolorum fugit. Reiciendis veniam doloremque nihil modi eos accusamus nisi obcaecati
+                    alias,
+                    animi eius laudantium consectetur et.
+                  </div>
+                </div>
               </div>
-            </li>
-            <li class="list-group-item">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="todo2">
-                <label class="form-check-label" for="todo2">Mandare avvisi prestiti scaduti</label>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Come posso accedere all'anagrafica utenti?
+                  </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque architecto
+                    at
+                    fugit aliquid quia expedita velit iste repellendus quae, praesentium natus numquam, corrupti ipsum
+                    cupiditate dolorum nostrum, provident ab sed?</div>
+                </div>
               </div>
-            </li>
-            <li class="list-group-item">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="todo3">
-                <label class="form-check-label" for="todo3">Ordinare nuovi libri</label>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Posso usare questa dashboard da mobile?
+                  </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eius,
+                    dolore, ex debitis, quo perferendis nisi molestias iste accusantium asperiores optio? Voluptates
+                    enim
+                    laboriosam expedita. Ratione sapiente ut recusandae sit!
+                  </div>
+                </div>
               </div>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -256,61 +338,7 @@
 
 
 
-
-  <div class="container mt-5">
-    <div class="card">
-      <div class="card-header">
-        F.A.Q.
-      </div>
-      <div class="card-body">
-        <div class="accordion accordion-flush" id="accordionFlushExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                Come aggiungere un nuovo libro?
-              </button>
-            </h2>
-            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sed ullam
-                odio aliquid dolorum fugit. Reiciendis veniam doloremque nihil modi eos accusamus nisi obcaecati alias,
-                animi eius laudantium consectetur et.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                Come posso accedere all'anagrafica utenti?
-              </button>
-            </h2>
-            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque architecto at
-                fugit aliquid quia expedita velit iste repellendus quae, praesentium natus numquam, corrupti ipsum
-                cupiditate dolorum nostrum, provident ab sed?</div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                Posso usare questa dashboard da mobile?
-              </button>
-            </h2>
-            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eius,
-                dolore, ex debitis, quo perferendis nisi molestias iste accusantium asperiores optio? Voluptates enim
-                laboriosam expedita. Ratione sapiente ut recusandae sit!
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
+  <!-- Importazione del bundle JavaScript di Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
