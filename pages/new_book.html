@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <!-- Importazione del foglio di stile personalizzato -->
-  <link rel="stylesheet" href="../css/style.css">
+  <!-- <link rel="stylesheet" href="../css/style.css"> -->
 </head>
 
 
@@ -55,7 +55,68 @@
     </div>
   </nav>
 
+  <div class="container">
+    <h1>Nuovo Libro</h1>
+    <div class="row mt-4">
 
+      <div class="col mb-3">
+        <label for="formGroupExampleInput" class="form-label">Nome Autore</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Inserisci il nome dell'autore">
+      </div>
+
+      <div class="col ">
+        <label for="formGroupExampleInput" class="form-label">Cognome Autore</label>
+        <input type="text" class="form-control" id="formGroupExampleInput"
+          placeholder="Inserisci il cognome dell'autore">
+      </div>
+
+      <div class="col col-12 mb-3">
+        <label for="formGroupExampleInput" class="form-label">Titolo</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Inserisci il titolo del libro">
+        Titolo versione italiana
+      </div>
+
+      <div class="col-12 col-md-4 mb-3">
+        <label class="visually form-label" for="autoSizingSelect">Genere</label>
+        <select class="form-select" id="autoSizingSelect">
+          <option selected>Scegli il genere</option>
+          <option value="1">Uomo</option>
+          <option value="2">Donna</option>
+          <option value="3">Albero</option>
+        </select>
+      </div>
+
+      <div class="col-12 col-md-4 mb-3">
+        <label for="formGroupExampleInput" class="form-label">Anno di pubblicazione</label>
+        <input type="number" id="typeNumber" class="form-control" min="1200" max="2024"
+          placeholder="Inserisci l'anno" />
+      </div>
+
+      <div class="col-12 col-md-4 mb-4">
+        <label for="formGroupExampleInput" class="form-label">ISBN#</label>
+        <input type="number" id="typeNumber" class="form-control" min="1200" max="2024"
+          placeholder="Inserisci il codice ISBN#" />
+      </div>
+
+      <hr>
+
+      <div class="col col-12 mb-3">
+        <label for="floatingTextarea">Note</label>
+        <textarea class="form-control" placeholder="Inserisci eventuali note sul libro"
+          id="floatingTextarea"></textarea>
+      </div>
+
+      <div class="col col-12 mb-3">
+        <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+        <label class="form-check-label" for="firstCheckbox">Disponibile anche in digitale</label>
+      </div>
+
+      <div class="col">
+        <button class="btn btn-primary">Aggiungi un libro</button>
+      </div>
+    </div>
+
+  </div>
 
   <!-- Importazione del bundle JavaScript di Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
